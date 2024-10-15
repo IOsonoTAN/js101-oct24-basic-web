@@ -44,6 +44,7 @@ export async function POST(request: Request) {
       data: {
         name: body.name,
         email: body.email,
+        password: body.password,
       },
     });
 
