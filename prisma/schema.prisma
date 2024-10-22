@@ -10,6 +10,9 @@ datasource db {
 model User {
   id        Int      @id @default(autoincrement())
   name      String
+  surname   String
+  nickname  String?
   email     String   @unique
   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
