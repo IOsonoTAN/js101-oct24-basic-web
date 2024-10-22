@@ -2,3 +2,15 @@ GET http://localhost:3000/api/users
 
 ###
 GET http://localhost:3000/api/users/2
+
+
+###
+
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "Krissada",
+  "email": "krissada@appsynth.net",
+  "surname": "Boontrigratn"
+}

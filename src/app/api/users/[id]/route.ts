@@ -23,12 +23,9 @@ export async function GET(
     }
 
     const prisma = new PrismaClient();
-    const user = await prisma.user.findFirst({
+    const user = await prisma.user.findUnique({
       where: {
         id: +id,
-      },
-      orderBy: {
-        id: "desc",
       },
     });
 
