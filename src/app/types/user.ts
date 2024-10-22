@@ -4,3 +4,10 @@ export interface User {
   email: string;
   createdAt: Date;
 }
+
+export interface CreateUserRequest {
+  name: string;
+  surname: string;
+  nickname: string;
+  email: string;
+}

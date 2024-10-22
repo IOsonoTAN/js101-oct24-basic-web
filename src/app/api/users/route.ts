@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       data: body,
     });
 
-    return NextResponse.json({ data: newUser });
+    return NextResponse.json({ data: newUser }, { status: 201 });
   } catch (error) {
     console.error(error);
     return NextResponse.json(

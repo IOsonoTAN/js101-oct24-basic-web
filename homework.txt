@@ -1,0 +1,8 @@
+User API
+- GET /users
+- POST /users
+
+Homework
+- GET /users/:id
+- PUT /users/:id
+- DELETE /users/:id
