@@ -77,6 +77,42 @@ export default function UsersPage() {
           </div>
         )}
       </div>
+
+      <form
+        onSubmit={async (e) => {
+          e.preventDefault();
+          const formData = new FormData(e.target as HTMLFormElement);
+          const newUser = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            nickname: formData.get("nickname"),
+            password: formData.get("password"),
+            surname: formData.get("surname"),
+          };
+          console.log("newUser ->", newUser);
+
+          // Add your API call to register the user here
+          // Example: await registerUser(newUser);
+        }}
+        style={{ marginTop: "20px" }}
+      >
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="nickname" placeholder="Nickname" />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input type="text" name="surname" placeholder="Surname" />
+        <button
+          type="submit"
+          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        >
+          Register
+        </button>
+      </form>
     </div>
   );
 }
